@@ -1,0 +1,21 @@
+{
+  "name": "ai-image-compress-tool",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\" \"npm run dev:desktop\"",
+    "dev:web": "npm --workspace @ai-image-compress-tool/web-client run dev",
+    "dev:api": "npm --workspace @ai-image-compress-tool/api-server run dev",
+    "dev:desktop": "npm --workspace @ai-image-compress-tool/desktop-app run dev",
+    "build": "npm --workspace @ai-image-compress-tool/shared run build && npm --workspace @ai-image-compress-tool/api-server run build && npm --workspace @ai-image-compress-tool/web-client run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "electron": "^35.1.5",
+    "wait-on": "^8.0.3"
+  }
+}

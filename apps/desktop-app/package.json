@@ -1,0 +1,9 @@
+{
+  "name": "@ai-image-compress-tool/desktop-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "dev": "node launch-electron.cjs"
+  }
+}
